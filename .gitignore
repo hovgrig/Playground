@@ -52,3 +52,7 @@ Src/Playground/Playground/Debug/main.obj
 *.lastbuildstate
 Src/Playground/Playground/Debug/Playground.log
 *.idb
+*.exe
+Src/Playground/Playground/Release/main.obj
+*.log
+*.obj

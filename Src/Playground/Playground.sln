@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Playground", "Playground\Playground.vcxproj", "{A340B523-A4F0-4456-A647-3026512FEED0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpServer1", "Hovo\Boost\HttpServer1\HttpServer1.vcxproj", "{4B0B15BF-01DE-4673-90CB-9B608D9CA9D4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpSyncClient", "Hovo\Boost\HttpSyncClient\HttpSyncClient.vcxproj", "{9067C041-F235-4D23-B4DD-50FDB8D75E12}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpAsyncClient", "Hovo\Boost\HttpAsyncClient\HttpAsyncClient.vcxproj", "{9853DD1C-474A-44E4-A9E4-76627684AB2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +19,18 @@ Global
 		{A340B523-A4F0-4456-A647-3026512FEED0}.Debug|Win32.Build.0 = Debug|Win32
 		{A340B523-A4F0-4456-A647-3026512FEED0}.Release|Win32.ActiveCfg = Release|Win32
 		{A340B523-A4F0-4456-A647-3026512FEED0}.Release|Win32.Build.0 = Release|Win32
+		{4B0B15BF-01DE-4673-90CB-9B608D9CA9D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4B0B15BF-01DE-4673-90CB-9B608D9CA9D4}.Debug|Win32.Build.0 = Debug|Win32
+		{4B0B15BF-01DE-4673-90CB-9B608D9CA9D4}.Release|Win32.ActiveCfg = Release|Win32
+		{4B0B15BF-01DE-4673-90CB-9B608D9CA9D4}.Release|Win32.Build.0 = Release|Win32
+		{9067C041-F235-4D23-B4DD-50FDB8D75E12}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9067C041-F235-4D23-B4DD-50FDB8D75E12}.Debug|Win32.Build.0 = Debug|Win32
+		{9067C041-F235-4D23-B4DD-50FDB8D75E12}.Release|Win32.ActiveCfg = Release|Win32
+		{9067C041-F235-4D23-B4DD-50FDB8D75E12}.Release|Win32.Build.0 = Release|Win32
+		{9853DD1C-474A-44E4-A9E4-76627684AB2D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9853DD1C-474A-44E4-A9E4-76627684AB2D}.Debug|Win32.Build.0 = Debug|Win32
+		{9853DD1C-474A-44E4-A9E4-76627684AB2D}.Release|Win32.ActiveCfg = Release|Win32
+		{9853DD1C-474A-44E4-A9E4-76627684AB2D}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
