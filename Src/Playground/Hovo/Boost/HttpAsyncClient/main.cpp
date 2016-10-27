@@ -15,6 +15,8 @@
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 
+#include <RuntimeMonitor/RuntimeMonitor.h>
+
 using boost::asio::ip::tcp;
 
 class client
@@ -37,10 +39,11 @@ public:
     // Start an asynchronous resolve to translate the server and service names
     // into a list of endpoints.
     tcp::resolver::query query(server, "http");
+
     resolver_.async_resolve(query,
         boost::bind(&client::handle_resolve, this,
-          boost::asio::placeholders::error,
-          boost::asio::placeholders::iterator));
+        boost::asio::placeholders::error,
+        boost::asio::placeholders::iterator));
   }
 
 private:
@@ -136,12 +139,16 @@ private:
       std::istream response_stream(&response_);
       std::string header;
       while (std::getline(response_stream, header) && header != "\r")
-        std::cout << header << "\n";
-      std::cout << "\n";
+      {
+          // std::cout << header << "\n";
+      }
+      // std::cout << "\n";
 
       // Write whatever content we already have to output.
+      /*
       if (response_.size() > 0)
         std::cout << &response_;
+        */
 
       // Start reading remaining data until EOF.
       boost::asio::async_read(socket_, response_,
@@ -160,7 +167,7 @@ private:
     if (!err)
     {
       // Write all of the data that has been read so far.
-      std::cout << &response_;
+      // std::cout << &response_;
 
       // Continue reading remaining data until EOF.
       boost::asio::async_read(socket_, response_,
@@ -180,30 +187,35 @@ private:
   boost::asio::streambuf response_;
 };
 
-int main(int argc, char* argv[])
+void request()
 {
-  try
-  {
-      /*
-    if (argc != 3)
+    RT_MONITOR;
+
+    try
     {
-      std::cout << "Usage: async_client <server> <path>\n";
-      std::cout << "Example:\n";
-      std::cout << "  async_client www.boost.org /LICENSE_1_0.txt\n";
-      return 1;
+        boost::asio::io_service io_service;
+        client c(io_service, "10.99.200.149", "/test.txt");
+        io_service.run();
     }
-    */
+    catch (std::exception& e)
+    {
+        std::cout << "Exception: " << e.what() << "\n";
+    }
+}
 
-    boost::asio::io_service io_service;
-    client c(io_service, "10.99.200.149", "/test.txt");
-    io_service.run();
-  }
-  catch (std::exception& e)
-  {
-    std::cout << "Exception: " << e.what() << "\n";
-  }
+void multipleTest()
+{
+    for(int i = 0; i < 1000; ++i)
+    {
+        request();
+    }
+}
 
-  int w;std::cin>>w;
+int main()
+{
+    multipleTest();
 
-  return 0;
+    RT_MONITOR_LOG_REPORT;
+    
+    int w;std::cin>>w;
 }

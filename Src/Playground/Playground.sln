@@ -9,6 +9,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpSyncClient", "Hovo\Boos
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpAsyncClient", "Hovo\Boost\HttpAsyncClient\HttpAsyncClient.vcxproj", "{9853DD1C-474A-44E4-A9E4-76627684AB2D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpServer2", "Hovo\Boost\HttpServer2\HttpServer2.vcxproj", "{A482392C-ACC1-4CC8-8F51-8267CB47F131}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpServer3", "Hovo\Boost\HttpServer3\HttpServer3.vcxproj", "{03C89EE9-63A8-4CBE-8A57-8DB763223D9B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XmlRpcClient", "Hovo\Boost\XmlRpcClient\XmlRpcClient.vcxproj", "{9957C23C-E309-4F8A-B24A-96F7B2ADE32C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XmlRpcServer", "Hovo\Boost\XmlRpcServer\XmlRpcServer.vcxproj", "{B2CB7465-8438-46B8-9C09-8C0196F08BDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +39,22 @@ Global
 		{9853DD1C-474A-44E4-A9E4-76627684AB2D}.Debug|Win32.Build.0 = Debug|Win32
 		{9853DD1C-474A-44E4-A9E4-76627684AB2D}.Release|Win32.ActiveCfg = Release|Win32
 		{9853DD1C-474A-44E4-A9E4-76627684AB2D}.Release|Win32.Build.0 = Release|Win32
+		{A482392C-ACC1-4CC8-8F51-8267CB47F131}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A482392C-ACC1-4CC8-8F51-8267CB47F131}.Debug|Win32.Build.0 = Debug|Win32
+		{A482392C-ACC1-4CC8-8F51-8267CB47F131}.Release|Win32.ActiveCfg = Release|Win32
+		{A482392C-ACC1-4CC8-8F51-8267CB47F131}.Release|Win32.Build.0 = Release|Win32
+		{03C89EE9-63A8-4CBE-8A57-8DB763223D9B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{03C89EE9-63A8-4CBE-8A57-8DB763223D9B}.Debug|Win32.Build.0 = Debug|Win32
+		{03C89EE9-63A8-4CBE-8A57-8DB763223D9B}.Release|Win32.ActiveCfg = Release|Win32
+		{03C89EE9-63A8-4CBE-8A57-8DB763223D9B}.Release|Win32.Build.0 = Release|Win32
+		{9957C23C-E309-4F8A-B24A-96F7B2ADE32C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9957C23C-E309-4F8A-B24A-96F7B2ADE32C}.Debug|Win32.Build.0 = Debug|Win32
+		{9957C23C-E309-4F8A-B24A-96F7B2ADE32C}.Release|Win32.ActiveCfg = Release|Win32
+		{9957C23C-E309-4F8A-B24A-96F7B2ADE32C}.Release|Win32.Build.0 = Release|Win32
+		{B2CB7465-8438-46B8-9C09-8C0196F08BDE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2CB7465-8438-46B8-9C09-8C0196F08BDE}.Debug|Win32.Build.0 = Debug|Win32
+		{B2CB7465-8438-46B8-9C09-8C0196F08BDE}.Release|Win32.ActiveCfg = Release|Win32
+		{B2CB7465-8438-46B8-9C09-8C0196F08BDE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

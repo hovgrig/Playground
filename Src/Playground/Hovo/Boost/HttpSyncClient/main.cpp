@@ -20,21 +20,11 @@ int main(int argc, char* argv[])
 {
   try
   {
-    /*
-    if (argc != 3)
-    {
-      std::cout << "Usage: sync_client <server> <path>\n";
-      std::cout << "Example:\n";
-      std::cout << "  sync_client www.boost.org /LICENSE_1_0.txt\n";
-      return 1;
-    }
-    */
-
     boost::asio::io_service io_service;
 
     // Get a list of endpoints corresponding to the server name.
     tcp::resolver resolver(io_service);
-    tcp::resolver::query query("localhost", "http");
+    tcp::resolver::query query("10.99.200.149", "http");
     tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
 
     // Try each endpoint until we successfully establish a connection.
@@ -53,7 +43,7 @@ int main(int argc, char* argv[])
 
     // Send the request.
     boost::asio::write(socket, request);
-
+    
     // Read the response status line. The response streambuf will automatically
     // grow to accommodate the entire line. The growth may be limited by passing
     // a maximum size to the streambuf constructor.
@@ -99,6 +89,8 @@ int main(int argc, char* argv[])
       std::cout << &response;
     if (error != boost::asio::error::eof)
       throw boost::system::system_error(error);
+
+    int w;std::cin>>w;
   }
   catch (std::exception& e)
   {

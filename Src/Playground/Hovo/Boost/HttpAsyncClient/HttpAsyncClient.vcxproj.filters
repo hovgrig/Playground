@@ -13,10 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e46ffbd2-f647-4edb-a6bb-9214689dd792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\RuntimeMonitor">
+      <UniqueIdentifier>{72bd7739-632f-410a-aa6a-12f24c3bdc2c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\RuntimeMonitor\RuntimeMonitor.cpp">
+      <Filter>Common\RuntimeMonitor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Common\RuntimeMonitor\RuntimeMonitor.h">
+      <Filter>Common\RuntimeMonitor</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
